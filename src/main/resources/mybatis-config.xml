@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="com.koreait.vo.UserVO" alias="UserVO" />
+		<typeAlias type="com.koreait.vo.ProductVO" alias="ProductVO" />
+		<typeAlias type="com.koreait.vo.EmployeeVO" alias="EmployeeVO" />
+		<typeAlias type="com.koreait.vo.WorkVO" alias="WorkVO" />
+		<typeAlias type="com.koreait.vo.OrderVO" alias="OrderVO" />
+		<typeAlias type="com.koreait.vo.EtcSpendingVO" alias="EtcSpendingVO" />
+		<typeAlias type="com.koreait.vo.NoticeVO" alias="NoticeVO" />
+	</typeAliases>
+
+	
+</configuration>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.koreait.dao.MybatisDAO">
+	
+	<!-- User -->
+	<select id="selectUserCount" parameterType="UserVO"  resultType="int">
+		select count(*) from "USER" where id=#{id} and pw=#{pw}
+	</select>
+	
+	
+	
+	<!-- Product -->
+	<select id="selectExistProducts" parameterType="String" resultType="ProductVO">
+		select * from PRODUCT WHERE id = #{id} and COUNT = 1 order by expireDate 
+	</select>
+	
+	<insert id="insertProduct" parameterType="ProductVO">
+		insert into product (id, name, code, price, expireDate, count) 
+		values (#{id}, #{name}, product_code_seq.nextval, #{price}, #{expireDate}, #{count})
+	</insert>
+	
+	<update id="updateProductCount" parameterType="ProductVO">
+		update product set count = #{count} where id = #{id} and code = #{code}
+	</update>
+	
+	<select id="selectRevenue" parameterType="String" resultType="int">
+		select nvl(sum(price), 0) from product where id = #{id} and count = 0
+	</select>
+	
+	
+	
+	<!-- Employee -->
+	<select id="selectAllEmployees" parameterType="String" resultType="EmployeeVO">
+		select * from EMPLOYEE where id = #{id}
+	</select>
+	
+	<delete id="deleteEmployee" parameterType="EmployeeVO">
+		delete from employee where id = #{id} and idx = #{idx}
+	</delete>
+
+	<insert id="insertEmployee" parameterType="EmployeeVO">
+		insert into employee (id, idx, name, wage) values (#{id}, employee_idx_seq.nextval, #{name}, #{wage})
+	</insert>
+	
+	
+	
+	<!-- Work -->
+	<select id="selectWorkPaySum" parameterType="String" resultType="int">
+		select nvl(sum(pay), 0) from work where id = #{id}
+	</select>
+	
+	<select id="selectAllWorks" parameterType="String" resultType="WorkVO">
+		select * from work where id = #{id}
+	</select>
+	
+	<insert id="insertWork" parameterType="WorkVO">
+		insert into work (id, idx, name, time, pay) values (#{id}, employee_idx_seq.nextval, #{name}, #{time}, #{pay})
+	</insert>
+	
+	
+	<!-- Order -->
+	<insert id="insertOrder" parameterType="OrderVO">
+		insert into "ORDER" (id, name, num, price) values (#{id}, #{name}, #{num}, #{price})
+	</insert>
+	
+	<select id="selectOrderPriceSum" parameterType="String" resultType="int">
+		select nvl(sum(price), 0) from "ORDER" where id = #{id}
+	</select>
+	
+	<select id="selectAllOrders" parameterType="String" resultType="OrderVO">
+		select * from "ORDER" where id = #{id}
+	</select>
+	
+	
+	
+	<!-- EtcSpending -->
+	<select id="selectEtcPriceSum" parameterType="String" resultType="int">
+		select nvl(sum(price), 0) from etcspending where id = #{id}
+	</select>
+
+	<select id="selectAllEtcs" parameterType="String" resultType="EtcSpendingVO">
+		select * from etcspending where id = #{id}
+	</select>
+	
+	<insert id="insertEtc" parameterType="EtcSpendingVO">
+		insert into etcspending (id, name, price) values (#{id}, #{name}, #{price})
+	</insert>
+	
+	
+	
+	<!-- Notice -->
+	<select id="selectRecentNotice" resultType="NoticeVO">
+		select * from (select * from notice order by datetime DESC) where rownum = 1
+	</select>
+	
+
+</mapper>

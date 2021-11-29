@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- vo 빈 생성 -->
+	<bean id="userVO" class="com.koreait.vo.UserVO"></bean>
+	<bean id="productVO" class="com.koreait.vo.ProductVO"></bean>
+	<bean id="employeeVO" class="com.koreait.vo.EmployeeVO"></bean>
+	<bean id="workVO" class="com.koreait.vo.WorkVO"></bean>
+	<bean id="orderVO" class="com.koreait.vo.OrderVO"></bean>
+	<bean id="etcSpendingVO" class="com.koreait.vo.EtcSpendingVO"></bean>
+	<bean id="spendingVO" class="com.koreait.vo.SpendingVO"></bean>
+	<bean id="noticeVO" class="com.koreait.vo.NoticeVO"></bean>
+	
+	<bean id="userList" class="com.koreait.vo.UserList"></bean>
+	<bean id="productList" class="com.koreait.vo.ProductList"></bean>
+	<bean id="employeeList" class="com.koreait.vo.EmployeeList"></bean>
+	<bean id="workList" class="com.koreait.vo.WorkList"></bean>
+	<bean id="orderList" class="com.koreait.vo.OrderList"></bean>
+	<bean id="etcSpendingList" class="com.koreait.vo.EtcSpendingList"></bean>
+	<bean id="spendingList" class="com.koreait.vo.SpendingList"></bean>
+		
+	
+</beans>

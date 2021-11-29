@@ -1,0 +1,260 @@
+* {
+	margin: 0;
+	padding: 0;	
+}
+ul li{
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color:white;
+}
+
+/* 로그인 상태 */
+#login {
+	cursor: pointer;
+	font:bold 16px "malgun gothic";
+	width:80px;
+	height:28px;
+	position: relative;
+	float: right;
+	margin:0;
+	text-align: center;
+}
+
+#login > ul > li {
+	position:relative;
+	float:left;
+	width:80px;
+}
+
+#login > ul > li > ul {
+	width:80px;
+	height: 0px;
+	position: relative;
+	top: 8px;
+	font-size:14px;
+	background: skyblue;
+	overflow: hidden;
+	transition-duration: 1s
+}
+
+#login > ul > li:hover > ul {
+	height: 20px;
+	transition-duration: 1s
+	
+}
+
+#login > ul > li:hover > a {
+	color: black;	
+	transition-duration: 1s
+}
+
+#login > ul > li > ul > li:hover {
+	background-color: red;
+	transition-duration: 1.5s
+}
+
+.main {
+   width: 100vw;
+   background-color: #E6E6E6; 
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+   overflow: hidden;
+   position:relative;
+}
+
+.nav {
+	width: 100vw;
+	height: 28px;
+	background-color: #0099FF;
+	margin-top:5px;
+	padding-right: 30px;
+}
+
+.loginStatus-Box {
+	position: absolute;
+	top: 8px;
+	right: 0px;
+	float: right; 
+	width: 160px;
+	height: 28px;
+	text-align: center;
+	padding: 0px 10px;
+}
+
+.loginStatus-Box-define {
+	float: left;
+	width: 60px;
+	font:bold 16px "malgun gothic";
+	color:white;
+}
+
+/* 홈 */
+.header a{
+	padding-left : 20px;
+	width : 300px;
+	cursor: pointer;
+	font:bold 16px "malgun gothic";
+	text-align: left;
+	color: white;
+	position: relative;
+	float: left;
+}
+
+/* 메뉴 */
+
+.menu {
+	position: relative;
+	float: left;
+	background-color: skyblue;
+	width: 140px;
+	height: 90vh;	
+}
+
+#menu-bar {
+	font:bold 16px "malgun gothic";
+	width:140px;
+	height:60px;
+	color:black;
+	line-height: 50px; 
+	margin:0 auto;
+	text-align: center;
+}
+
+#menu-bar > ul > li {
+	width:140px;
+	position:relative;
+	border-bottom: 0.5px solid white;
+	transition-duration: 0.7s
+}
+
+#menu-bar > ul > li > ul {
+	width:140px;
+	height: 0px;
+	overflow: hidden;
+	position: relative;
+	font-size:14px;
+	background: skyblue;
+	transition-duration: 0.7s
+}
+
+#menu-bar > ul > li > ul > li {
+	border-top: 0.5px solid white;
+}
+
+#menu-bar > ul > li:hover > ul {
+	display:block;
+	height: 100px;
+	background-color: #00A3D2;
+	transition-duration: 0.7s
+}
+
+#menu-bar > ul > li:hover {
+	background-color: #00A3D2;
+	transition-duration: 0.7s
+}
+
+#menu-bar > ul > li > ul > li:hover {
+	background: #FFDF65;
+	transition-duration: 1.5s;
+}
+
+#menu-bar > ul > li > ul > li:hover > a {
+	color: #6887B2;	
+	transition-duration: 1.5s;
+}
+
+.body {
+	position: absolute;
+	left: 140px;
+	top: 33px;
+	
+	width: 85vw;
+	height: 85vh;
+}
+
+
+.body-box{
+	position: relative;
+	top: 20px;
+	left: 20px;
+	/* 윈도우 사이즈 따라 다름 - 나중 수정 - 전체화면 권장*/
+	width: 80vw;
+	height: 70vh;
+	
+	padding: 40px;
+	background-color: white;	
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 여기까지 통일 */
+
+.body-box-div1{
+	position: relative;
+	width: 640px;
+	height: 300px;
+	overflow: auto;
+}
+
+.notice {
+	text-align: center;
+	font:bold 20px "malgun gothic";
+	margin: 10px;
+}
+
+.body-box-div2 {
+	position: relative;
+	left: 0px;
+	top: 20px;
+	overflow: hidden;
+}
+
+.body-box-div2-circle {
+	position: relative;
+	top: 0px;
+	float: left;
+		
+	width: 160px;
+	height: 160px;
+	margin: 30px;
+	
+	font:bold 18px "malgun gothic";
+	color: white;
+	
+	border-radius: 80px;
+	
+	background-color: skyblue;
+	box-shadow: 0px 0px 25px gray;
+	
+	border: 0px solid #00A3D2
+}
+
+.body-box-div2-circle:hover {
+	width: 180px;
+	height: 180px;
+	border-radius: 90px;
+	box-shadow: 0px 0px 27px gray;
+	margin: 20px;
+	
+	/* 색상 변경 */
+	background-color: #00A3D2;
+	
+	transition-duration: 0.3s
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
